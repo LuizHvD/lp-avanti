@@ -134,8 +134,7 @@
 }
 
 #menu-toggle {
-    padding: 10px 20px;
-    background-color: #ffffff;
+    background-color: white;
     cursor: pointer;
     font-weight: bold;
     border: none;
@@ -192,6 +191,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    
 }
 
 .departamentos li {
@@ -205,6 +205,54 @@
     color: #005CFF;
 }
 
+.super-sale {
+    width: 100%;
+    height: 510px;
+    background-color: #E7E7EA;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+}
+
+.super-sale-content {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.super{
+    display: flex;
+
+}
+.super-sale h2 {
+    font-size: 100px;
+}
+
+.super-sale h4{
+    font-size: 100px;
+    font-weight: 100;
+}
+
+.super-sale h3 {
+    color: #005CFF;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.super-sale-discount {
+    font-size: 60px;
+    color: #005CFF;
+    font-weight: bold;
+}
+
+.super-sale-text{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .carousel-container {
     width: 100%;
     max-width: 1200px;
@@ -212,7 +260,7 @@
     padding: 0 2rem;
 }
 
-h2 {
+.carousel-container h2 {
     margin-bottom: 1rem;
     color: #333;
 }
