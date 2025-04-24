@@ -6,8 +6,9 @@
     <title>LP-Avanti</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <script src="script.js"></script>
 </head>
+<title>Carrossel de Produtos</title>
 <body>
     <header class="topo-site">
         <div class="barra-topo">
@@ -40,24 +41,69 @@
             </div>
           </div>
         </div>
-        <nav class="menu-categorias">
-          <div class="categorias">
-            <img src="assets/3Listras-pretas.png" alt="Menu">
-            <a href="#"> <strong>Todas as Categorias</a> </span>
+
+        <div class="menu-container">
+          <button id="menu-toggle">☰ Todas as Categorias</button>
+          <div class="mega-menu" id="megaMenu">
+            <div class="column">
+              <h4>Departamento</h4>
+              <ul>
+                <li>Departamento</li>
+                <li>Departamento</li>
+                <li>Departamento</li>
+                <li>Departamento</li>
+                <li>Departamento</li>
+                <li>Departamento</li>
+                <li>Departamento</li>
+                <li>Departamento</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Categoria</h4>
+              <ul>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Categoria</h4>
+              <ul>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+                <li>Categoria</li>
+              </ul>
+            </div>
           </div>
-          <a href="#">
-          <ul>
-            <li>Departamento</li> </a>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-            <li>Departamento</li>
-          </ul>
-          
-        </nav>
+        </div>
       </header>
-      
+ <div class="carousel-container">
+      <h2>Lançamentos</h2>
+        <div class="carousel-wrapper">
+          <button class="arrow left" id="prevBtn" disabled>&#8592;</button>
+          <div class="carousel" id="carousel">
+            <div class="card">Produto 1</div>
+            <div class="card">Produto 2</div>
+            <div class="card">Produto 3</div>
+            <div class="card">Produto 4</div>
+            <div class="card">Produto 5</div>
+            <div class="card">Produto 6</div>
+            <div class="card">Produto 7</div>
+            <div class="card">Produto 8</div>
+            <div class="card">Produto 9</div>
+            <div class="card">Produto 10</div>
+          </div>
+          <button class="arrow right" id="nextBtn">&#8594;</button>
+        </div>
+      </div>
 </body>
 </html>
