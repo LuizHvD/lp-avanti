@@ -253,16 +253,30 @@
     
 }
 
+.top-carousel{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.top-carousel button{
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
 .carousel-container {
     width: 100%;
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
+    margin: 96px auto;
+    padding: 0 1rem;
 }
 
 .carousel-container h2 {
-    margin-bottom: 1rem;
-    color: #333;
+    margin-bottom: 19px;
+    
 }
 
 .carousel-wrapper {
@@ -288,18 +302,28 @@
 
 .card {
     min-width: 200px;
-    height: 300px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    height: 409px;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
     flex-shrink: 0;
-    text-align: center;
-    padding: 1rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+  }
+
+.product-image{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .card:hover {
@@ -309,7 +333,6 @@
 
 .arrow {
     background: #fff;
-    border: none;
     width: 40px;
     height: 40px;
     font-size: 1.5rem;
@@ -319,11 +342,10 @@
     justify-content: center;
     position: absolute;
     z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
-    color: #333;
+    border-color: #005CFF;
+    color: #005CFF;
     transition: background-color 0.3s;
 }
 
@@ -342,4 +364,71 @@
 
 .right {
     right: 0;
+}
+
+.product-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #00264E;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 1;
+}
+  
+
+.product-title {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.discount-badge {
+    background-color: #5EC0BE;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.new-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.25rem 0;
+}
+
+.installments {
+    font-size: 0.875rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.buy-button {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #004fcc;
 }
