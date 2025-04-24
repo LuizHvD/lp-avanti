@@ -1,10 +1,16 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: 'Nunito Sans', sans-serif;
-  }
+    
+}
 
-.topo-site {
-    width: 100%;
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .barra-topo {
@@ -17,6 +23,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     text-align: center;
+    width: 100%;
 }
 
 .texto-com-destaque {
@@ -42,6 +49,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 16px 32px;
+    width: 100%;
 }
 
 .logo {
@@ -110,17 +118,35 @@ body {
     position: relative;
 }
 
+.menu-categorias {
+    width: 100%;
+}
+
+.nav-categorias {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .menu-container {
     position: relative;
     display: inline-block;
 }
 
-.menu-trigger {
+#menu-toggle {
     padding: 10px 20px;
     background-color: #ffffff;
     cursor: pointer;
     font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
 }
+
+.menu-container button:hover{
+    color: #005CFF;
+}
+
 
 .mega-menu {
     display: none;
@@ -155,10 +181,28 @@ body {
     cursor: pointer;
 }
 
-* {
-    box-sizing: border-box;
+.departamentos {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.departamentos ul {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.departamentos li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.departamentos li:hover {
+    color: #005CFF;
 }
 
 .carousel-container {
