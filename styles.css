@@ -525,3 +525,80 @@
     font-size: 30px;
     align-content: center;
 }
+
+.cadastro-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #656565;
+    flex-direction: column;
+}
+
+.text-cadastre-se{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.cadastro-footer span{
+    font-size: 20px;
+    color: #005CFF;
+    font-weight: bold;
+}
+
+.email-name{
+    height: 176px;
+    background-color: #DEDEDE;
+    border-radius: 8px;
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.input-form{
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 280px;
+    outline: none;
+}
+
+.checkbox{
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+.privacy{
+    color: #333;
+    font-size: 12px;
+}
+
+.privacy input{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.botao-cadastrar{
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 24px 14px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 121px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao-cadastrar:hover{
+    background-color: #0052cc;
+}
