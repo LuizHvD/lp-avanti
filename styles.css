@@ -338,7 +338,6 @@
     font-size: 1.5rem;
     cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
     position: absolute;
     z-index: 1;
@@ -439,7 +438,10 @@
     justify-content: center;
     gap: 20px;
     margin: 96px auto;
+    width: 100%;
+    max-width: 1200px;
 }
+
 
 .description-product img{
     background-color: #C2C2C2;

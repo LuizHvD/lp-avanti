@@ -1,54 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.getElementById("carousel");
-    const nextBtn = document.getElementById("nextBtn");
-    const prevBtn = document.getElementById("prevBtn");
+  
+function initCarousel(carouselId, prevBtnId, nextBtnId) {
+  const carousel = document.getElementById(carouselId);
+    const nextBtn = document.getElementById(nextBtnId);
+    const prevBtn = document.getElementById(prevBtnId);
+    
+  if (!carousel || !nextBtn || !prevBtn) return;
 
-    // Calcular largura visível do carrossel
     const carouselWidth = carousel.clientWidth;
-    // Largura de um card + gap
-    const cardWidth = 200 + 16; // 200px do card + 16px do gap
-
-    // Número de cards visíveis por vez
+    const cardWidth = 200 + 16; m
     const visibleCards = Math.floor(carouselWidth / cardWidth);
-    // Largura total do scroll (considerando todos os cards + gaps)
     const scrollWidth = carousel.scrollWidth;
-
-    // Função para verificar e atualizar o estado dos botões
-    function updateButtonStates() {
-      // Desativar o botão prev se estiver no início
+    
+  function updateButtonStates() {
       prevBtn.disabled = carousel.scrollLeft <= 0;
-
-      // Desativar o botão next se estiver no final
-      // Leva em conta a largura visível do carrossel
+      
       const maxScrollLeft = scrollWidth - carouselWidth;
-      nextBtn.disabled = carousel.scrollLeft >= maxScrollLeft - 5; // tolerância de 5px
-    }
+      nextBtn.disabled = carousel.scrollLeft >= maxScrollLeft - 5; 
+  }
+    
+  const scrollAmount = cardWidth * Math.max(1, Math.floor(visibleCards / 2));
 
-    // Quantidade de pixels para rolar
-    const scrollAmount = cardWidth * Math.max(1, Math.floor(visibleCards / 2));
-
-    nextBtn.addEventListener("click", () => {
+  nextBtn.addEventListener("click", () => {
       carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      // Atualizar botões depois da animação
       setTimeout(updateButtonStates, 300);
-    });
-
-    prevBtn.addEventListener("click", () => {
-      carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      // Atualizar botões depois da animação
-      setTimeout(updateButtonStates, 300);
-    });
-
-    // Monitorar scroll manual
-    carousel.addEventListener("scroll", () => {
-      updateButtonStates();
-    });
-
-    // Inicializar estado dos botões
-    updateButtonStates();
-
-    // Atualizar ao redimensionar janela
-    window.addEventListener("resize", () => {
-      updateButtonStates();
-    });
   });
+
+  prevBtn.addEventListener("click", () => {
+      carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      setTimeout(updateButtonStates, 300);
+  });
+    
+  carousel.addEventListener("scroll", updateButtonStates);
+    
+  updateButtonStates();
+    
+  window.addEventListener("resize", updateButtonStates);
+  }
+
+initCarousel("carousel1", "prevBtn1", "nextBtn1");
+initCarousel("carousel2", "prevBtn2", "nextBtn2");
+});
